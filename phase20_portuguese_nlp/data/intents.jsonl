@@ -1,0 +1,24 @@
+{"text":"Olá, tudo bem?","intent":"saudacao"}
+{"text":"Oi, preciso de ajuda","intent":"saudacao"}
+{"text":"Bom dia","intent":"saudacao"}
+{"text":"Até logo","intent":"despedida"}
+{"text":"Tchau, obrigado","intent":"despedida"}
+{"text":"Até mais tarde","intent":"despedida"}
+{"text":"Como faço para treinar o modelo?","intent":"treinamento"}
+{"text":"Quero iniciar um treinamento de IA","intent":"treinamento"}
+{"text":"Qual comando uso para treinar?","intent":"treinamento"}
+{"text":"Como executo o modelo salvo?","intent":"execucao_modelo"}
+{"text":"Quero fazer uma previsão","intent":"execucao_modelo"}
+{"text":"Como rodar a inteligência artificial?","intent":"execucao_modelo"}
+{"text":"Tenho uma dúvida de matemática","intent":"duvida_matematica"}
+{"text":"Explique o que é uma derivada","intent":"duvida_matematica"}
+{"text":"Preciso estudar probabilidade","intent":"duvida_matematica"}
+{"text":"Tenho uma dúvida de física","intent":"duvida_ciencias"}
+{"text":"Quero aprender química","intent":"duvida_ciencias"}
+{"text":"Explique biologia","intent":"duvida_ciencias"}
+{"text":"Preciso estudar história","intent":"duvida_humanas"}
+{"text":"Tenho dúvida de geografia","intent":"duvida_humanas"}
+{"text":"Quero estudar filosofia e sociologia","intent":"duvida_humanas"}
+{"text":"Ajude com redação","intent":"duvida_linguagens"}
+{"text":"Quero estudar literatura portuguesa","intent":"duvida_linguagens"}
+{"text":"Tenho dúvida de língua inglesa","intent":"duvida_linguagens"}
