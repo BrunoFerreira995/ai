@@ -11,6 +11,8 @@ from .portuguese_language import (
     semantic_relations,
     syntactic_analysis,
 )
+from .literacy import analyze_word, literacy_response, split_syllables
+from .dictionary import is_portuguese_word, load_portuguese_words
 
 __all__ = [
     "PortugueseAssistant",
@@ -29,4 +31,9 @@ __all__ = [
     "portuguese_topic_summary",
     "semantic_relations",
     "syntactic_analysis",
+    "analyze_word",
+    "literacy_response",
+    "split_syllables",
+    "is_portuguese_word",
+    "load_portuguese_words",
 ]

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="430" viewBox="0 0 900 430">
+  <rect width="900" height="430" rx="16" fill="#101827"/>
+  <rect x="24" y="24" width="852" height="42" rx="8" fill="#1f2a44"/>
+  <circle cx="48" cy="45" r="7" fill="#ef6a6a"/><circle cx="72" cy="45" r="7" fill="#f2c14e"/><circle cx="96" cy="45" r="7" fill="#63c174"/>
+  <text x="130" y="52" fill="#d8e2f0" font-family="monospace" font-size="18">AI System — chat em português</text>
+  <text x="48" y="120" fill="#86efac" font-family="monospace" font-size="20">Você:</text><text x="155" y="120" fill="#f8fafc" font-family="monospace" font-size="20">o que é matemática?</text>
+  <text x="48" y="174" fill="#93c5fd" font-family="monospace" font-size="20">IA:</text><text x="115" y="174" fill="#f8fafc" font-family="monospace" font-size="20">Matemática é o estudo dos números,</text>
+  <text x="115" y="207" fill="#f8fafc" font-family="monospace" font-size="20">formas, padrões e relações.</text>
+  <text x="48" y="280" fill="#86efac" font-family="monospace" font-size="20">Você:</text><text x="155" y="280" fill="#f8fafc" font-family="monospace" font-size="20">sair</text>
+  <text x="48" y="334" fill="#93c5fd" font-family="monospace" font-size="20">IA:</text><text x="115" y="334" fill="#f8fafc" font-family="monospace" font-size="20">Até logo!</text>
+</svg>

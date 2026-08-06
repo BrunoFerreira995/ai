@@ -31,6 +31,10 @@ def main() -> None:
         raise FileNotFoundError(f"Modelo não encontrado: {model_path}. Execute ./train.sh primeiro.")
 
     model = tf.keras.models.load_model(model_path)
+    classes_file = model_path.parent / "classes.json"
+    class_names = json.loads(classes_file.read_text(encoding="utf-8")) if classes_file.exists() else None
+    rules_file = model_path.parent / "business_rules.json"
+    business_rules = json.loads(rules_file.read_text(encoding="utf-8")) if rules_file.exists() else {}
     if args.input:
         input_path = Path(args.input)
         if not input_path.is_file():
@@ -44,7 +48,11 @@ def main() -> None:
         values = values[np.newaxis, ...]
     probabilities = model.predict(values, verbose=0)
     predictions = np.argmax(probabilities, axis=-1)
-    print(json.dumps({"classes": predictions.tolist(), "probabilities": probabilities.tolist()}, indent=2))
+    result = {"classes": predictions.tolist(), "probabilities": probabilities.tolist()}
+    if class_names:
+        result["class_names"] = [class_names[int(index)] for index in predictions]
+        result["responses"] = [business_rules.get(name, f"A classificação recebida foi {name}. Como posso ajudar?") for name in result["class_names"]]
+    print(json.dumps(result, ensure_ascii=False, indent=2))
 
 
 if __name__ == "__main__":

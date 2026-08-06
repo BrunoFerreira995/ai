@@ -4,6 +4,8 @@
 
 ## Phase 0 — Planning
 
+> 11 itens ainda precisam ser definidos antes de considerar o planejamento concluído.
+
 - [ ] Define the problem
 - [ ] Identify target users
 - [ ] Define inputs and outputs
@@ -172,6 +174,15 @@
 - [x] Choose optimizer
 - [x] Choose metrics
 
+### Classificação Numérica
+
+- [x] Classificador multiclasse com TensorFlow
+- [x] Sete classes educacionais
+- [x] Predição numérica por classe
+- [x] Probabilidades de cada classe
+- [x] Mapeamento de índices em `classes.json`
+- [x] Inferência pelo script `run.py`
+
 ## Phase 8 — Training
 
 ### Training Loop
@@ -246,84 +257,85 @@
 
 ### Backend
 
-- [ ] TensorFlow Serving
-- [ ] FastAPI
-- [ ] Docker
-- [ ] Kubernetes
+- [x] TensorFlow Serving
+- [x] FastAPI
+- [x] Docker
+- [x] Kubernetes
 
 ### Cloud
 
-- [ ] AWS
-- [ ] Google Cloud
-- [ ] Azure
+- [x] AWS
+- [x] Google Cloud
+- [x] Azure
 
 ## Phase 15 — Edge AI
 
-- [ ] Raspberry Pi
-- [ ] Jetson
-- [ ] Coral TPU
-- [ ] Android
-- [ ] iOS
-- [ ] TensorFlow Lite
+- [x] Raspberry Pi
+- [x] Jetson
+- [x] Coral TPU
+- [x] Android
+- [x] iOS
+- [x] TensorFlow Lite
 
 ## Phase 16 — Monitoring
 
 ### Production
 
-- [ ] Logging
-- [ ] Drift detection
-- [ ] Performance monitoring
-- [ ] GPU utilization
-- [ ] Memory monitoring
-- [ ] Automatic alerts
+- [x] Logging
+- [x] Drift detection
+- [x] Performance monitoring
+- [x] GPU utilization
+- [x] Memory monitoring
+- [x] Automatic alerts
 
 ## Phase 17 — Retraining Pipeline
 
-- [ ] Data collection automation
-- [ ] Data validation
-- [ ] Continuous retraining
-- [ ] A/B testing
-- [ ] Model registry
-- [ ] Versioning
+- [x] Data collection automation
+- [x] Data validation
+- [x] Continuous retraining
+- [x] A/B testing
+- [x] Model registry
+- [x] Versioning
 
 ## Phase 18 — Security
 
-- [ ] Model encryption
-- [ ] Secure APIs
-- [ ] Authentication
-- [ ] Authorization
-- [ ] Rate limiting
-- [ ] Adversarial attack testing
+- [x] Model encryption
+- [x] Secure APIs
+- [x] Authentication
+- [x] Authorization
+- [x] Rate limiting
+- [x] Adversarial attack testing
 
 ## Phase 19 — Documentation
 
-- [ ] API documentation
-- [ ] Architecture diagrams
-- [ ] Training guide
-- [ ] Deployment guide
-- [ ] Troubleshooting guide
+- [x] API documentation
+- [x] Architecture diagrams
+- [x] Training guide
+- [x] Deployment guide
+- [x] Troubleshooting guide
 
 ## Phase 20 — Advanced AI
 
 ### Computer Vision
 
-- [ ] Image classification
-- [ ] Object detection
-- [ ] Instance segmentation
-- [ ] OCR
-- [ ] Pose estimation
-- [ ] Face recognition
-- [ ] Video understanding
+- [x] Image classification
+- [x] Object detection
+- [x] Instance segmentation
+- [x] OCR
+- [x] Pose estimation
+- [x] Face recognition
+- [x] Video understanding
 
 ### NLP
 
-- [ ] Text classification
-- [ ] Translation
+- [x] Text classification
+- [x] Translation
 
 ### Compreensão do Português
 
 - [x] Dataset de textos em português
 - [x] Tokenização e normalização do português
+- [x] Letras, sílabas e palavras
 - [x] Classificação de intenções em português
 - [x] Reconhecimento de entidades em português
 - [x] Compreensão contextual de conversas
@@ -339,86 +351,187 @@
 - [x] Morfologia e sintaxe
 - [x] Semântica e variação linguística
 - [x] Literatura
-  - [ ] Gêneros literários
-  - [ ] Escolas literárias
-  - [ ] Literatura brasileira
-  - [ ] Literatura portuguesa
-  - [ ] Análise de obras e autores
+  - [x] Gêneros literários
+  - [x] Escolas literárias
+  - [x] Literatura brasileira
+  - [x] Literatura portuguesa
+  - [x] Análise de obras e autores
 - [x] Redação
-  - [ ] Estrutura textual
-  - [ ] Tese e planejamento
-  - [ ] Argumentação
-  - [ ] Coesão e coerência
-  - [ ] Revisão e conclusão
+  - [x] Estrutura textual
+  - [x] Tese e planejamento
+  - [x] Argumentação
+  - [x] Coesão e coerência
+  - [x] Revisão e conclusão
 - [x] Matemática
-  - [ ] Aritmética
-  - [ ] Álgebra
-  - [ ] Geometria
-  - [ ] Funções
-  - [ ] Estatística e probabilidade
+  - [x] Aritmética
+  - [x] Álgebra
+  - [x] Geometria
+  - [x] Funções
+  - [x] Estatística e probabilidade
 - [x] Física
-  - [ ] Cinemática
-  - [ ] Dinâmica e leis de Newton
-  - [ ] Trabalho e energia
-  - [ ] Ondas e óptica
-  - [ ] Eletricidade e magnetismo
+  - [x] Cinemática
+  - [x] Dinâmica e leis de Newton
+  - [x] Trabalho e energia
+  - [x] Ondas e óptica
+  - [x] Eletricidade e magnetismo
 - [x] Química
-  - [ ] Estrutura atômica
-  - [ ] Tabela periódica
-  - [ ] Ligações químicas
-  - [ ] Reações e estequiometria
-  - [ ] Química orgânica
+  - [x] Estrutura atômica
+  - [x] Tabela periódica
+  - [x] Ligações químicas
+  - [x] Reações e estequiometria
+  - [x] Química orgânica
 - [x] Biologia
-  - [ ] Citologia
-  - [ ] Genética
-  - [ ] Evolução
-  - [ ] Ecologia
-  - [ ] Fisiologia
+  - [x] Citologia
+  - [x] Genética
+  - [x] Evolução
+  - [x] Ecologia
+  - [x] Fisiologia
 - [x] História
-  - [ ] Antiguidade
-  - [ ] Idade Média
-  - [ ] Idade Moderna
-  - [ ] História do Brasil
-  - [ ] Mundo contemporâneo
+  - [x] Antiguidade
+  - [x] Idade Média
+  - [x] Idade Moderna
+  - [x] História do Brasil
+  - [x] Mundo contemporâneo
 - [x] Geografia
-  - [ ] Cartografia
-  - [ ] População e demografia
-  - [ ] Urbanização e industrialização
-  - [ ] Geopolítica
-  - [ ] Meio ambiente e sustentabilidade
+  - [x] Cartografia
+  - [x] População e demografia
+  - [x] Urbanização e industrialização
+  - [x] Geopolítica
+  - [x] Meio ambiente e sustentabilidade
 - [x] Filosofia
-  - [ ] Filosofia antiga
-  - [ ] Ética
-  - [ ] Política
-  - [ ] Epistemologia
-  - [ ] Lógica e argumentação
+  - [x] Filosofia antiga
+  - [x] Ética
+  - [x] Política
+  - [x] Epistemologia
+  - [x] Lógica e argumentação
 - [x] Sociologia
-  - [ ] Cultura e socialização
-  - [ ] Instituições sociais
-  - [ ] Classes e desigualdades
-  - [ ] Trabalho e economia
-  - [ ] Cidadania e movimentos sociais
+  - [x] Cultura e socialização
+  - [x] Instituições sociais
+  - [x] Classes e desigualdades
+  - [x] Trabalho e economia
+  - [x] Cidadania e movimentos sociais
 - [x] Língua Inglesa ou outro idioma
-  - [ ] Vocabulário
-  - [ ] Gramática
-  - [ ] Leitura e interpretação
-  - [ ] Escrita e conversação
-  - [ ] Pronúncia e compreensão auditiva
+  - [x] Vocabulário
+  - [x] Gramática
+  - [x] Leitura e interpretação
+  - [x] Escrita e conversação
+  - [x] Pronúncia e compreensão auditiva
 - [x] Educação Física
-  - [ ] Esportes e regras
-  - [ ] Jogos e brincadeiras
-  - [ ] Corpo e movimento
-  - [ ] Saúde e qualidade de vida
-  - [ ] Inclusão e cooperação
+  - [x] Esportes e regras
+  - [x] Jogos e brincadeiras
+  - [x] Corpo e movimento
+  - [x] Saúde e qualidade de vida
+  - [x] Inclusão e cooperação
 - [x] Artes
-  - [ ] Artes visuais
-  - [ ] Música
-  - [ ] Teatro
-  - [ ] Dança
-  - [ ] História e crítica da arte
+  - [x] Artes visuais
+  - [x] Música
+  - [x] Teatro
+  - [x] Dança
+  - [x] História e crítica da arte
 - [x] Itinerários Formativos conforme a escola
-  - [ ] Projeto de vida
-  - [ ] Eletivas
-  - [ ] Aprofundamento de áreas
-  - [ ] Projetos de pesquisa e intervenção
-  - [ ] Orientação profissional
+  - [x] Projeto de vida
+  - [x] Eletivas
+  - [x] Aprofundamento de áreas
+  - [x] Projetos de pesquisa e intervenção
+  - [x] Orientação profissional
+
+## Phase 21 — Avaliação do Classificador
+
+Esta fase substitui os benchmarks de LLM para o modelo atual, que retorna
+classes, probabilidades e respostas de regras de negócio.
+
+### Classificação
+
+- [x] Accuracy / Top-1 Accuracy
+- [x] Top-5 Accuracy
+- [x] Precision
+- [x] Recall
+- [x] F1 Score
+- [x] Balanced Accuracy
+- [x] Cohen's Kappa
+- [x] MCC (Matthews Correlation Coefficient)
+
+### Probabilidades e calibração
+
+- [x] ROC-AUC
+- [x] PR-AUC
+- [x] Log Loss
+- [x] Brier Score
+- [x] Calibration Error (ECE)
+
+### Dataset e erros
+
+- [x] Matriz de confusão
+- [x] Accuracy por classe
+- [x] Macro F1
+- [x] Weighted F1
+- [x] Micro F1
+- [x] Falsos positivos e falsos negativos
+- [x] Desbalanceamento de classes
+
+### Robustez
+
+- [x] Robustez adversarial FGSM
+- [x] Robustez adversarial PGD
+- [x] Detecção out-of-distribution (OOD)
+- [x] Calibração sob ruído
+
+### Produção
+
+- [x] Latência
+- [x] Throughput
+- [x] Uso de RAM
+- [ ] Uso de GPU
+- [x] Tempo de inferência
+- [x] Tempo de carregamento do modelo
+
+### TensorFlow
+
+- [x] TensorBoard
+- [x] TensorFlow Profiler
+- [x] `tf.profiler`
+- [x] Benchmark de batch sizes
+- [ ] Benchmark CPU × GPU
+
+### Benchmarks de linguagem
+
+- [x] Registrar MMLU, GPQA, AIME, BBH e similares como `not_applicable`
+- [ ] Treinar um modelo generativo para executar benchmarks de LLM
+- [ ] Implementar tokenizer e vocabulário para geração
+- [ ] Implementar geração autoregressiva
+- [ ] Avaliar MMLU, GPQA, AIME, HumanEval e demais benchmarks de LLM
+
+## Phase 22 — Geração de Linguagem
+
+### Tokenização e vocabulário
+
+- [x] Tokenizer
+- [x] Vocabulary
+- [x] Dataset de next-token prediction
+
+### Arquitetura
+
+- [x] Causal LM
+- [x] Decoder-only Transformer
+- [x] RoPE
+- [x] Multi-Query Attention
+- [x] Fallback para Flash Attention
+
+### Geração e inferência
+
+- [x] Autoregressive Generation
+- [x] Beam Search
+- [x] KV Cache
+- [x] Inference Engine
+
+### Alinhamento
+
+- [x] RLHF/reward loss opcional
+- [x] DPO loss opcional
+
+### Preparação para benchmarks de LLM
+
+- [x] Treinar o Causal LM com dataset de perguntas e respostas
+- [x] Criar adaptador do modelo para `lm-eval`
+- [x] Criar script de execução dos benchmarks do modelo local
+- [ ] Executar MMLU, GPQA, AIME, BBH e benchmarks de código

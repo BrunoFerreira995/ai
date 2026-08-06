@@ -1,0 +1,36 @@
+{
+  "family": "ai-model-api",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "1024",
+  "memory": "2048",
+  "executionRoleArn": "arn:aws:iam::ACCOUNT_ID:role/ecsTaskExecutionRole",
+  "containerDefinitions": [
+    {
+      "name": "ai-model-api",
+      "image": "ACCOUNT_ID.dkr.ecr.REGION.amazonaws.com/ai-model-api:latest",
+      "essential": true,
+      "portMappings": [
+        {"containerPort": 8000, "protocol": "tcp"}
+      ],
+      "environment": [
+        {"name": "MODEL_PATH", "value": "/app/artifacts/saved_model"}
+      ],
+      "healthCheck": {
+        "command": ["CMD-SHELL", "python -c \"import urllib.request; urllib.request.urlopen('http://localhost:8000/health')\""],
+        "interval": 30,
+        "timeout": 5,
+        "retries": 3,
+        "startPeriod": 30
+      },
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/ai-model-api",
+          "awslogs-region": "REGION",
+          "awslogs-stream-prefix": "ecs"
+        }
+      }
+    }
+  ]
+}

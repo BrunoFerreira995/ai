@@ -23,6 +23,17 @@ from phase7_model_design import ModelConfig, build_classifier
 from phase8_training import TrainingConfig, train_model
 from phase10_evaluation import evaluate_classifier
 from phase13_export import export_onnx, export_saved_model, export_tflite
+from business_rules import DEFAULT_RESPONSES
+
+DEMO_CLASS_NAMES = [
+    "Língua Portuguesa",
+    "Matemática",
+    "Ciências da Natureza",
+    "Ciências Humanas",
+    "Língua Inglesa e Idiomas",
+    "Artes",
+    "Educação Física e Itinerários",
+]
 
 
 def make_demo_dataset(samples: int, features: int, classes: int, seed: int) -> tuple[np.ndarray, np.ndarray]:
@@ -68,7 +79,7 @@ def main() -> None:
     parser.add_argument("--batch-size", type=int, default=32)
     parser.add_argument("--samples", type=int, default=600, help="demo sample count when --data is omitted")
     parser.add_argument("--features", type=int, default=8, help="demo feature count")
-    parser.add_argument("--classes", type=int, default=3, help="demo class count")
+    parser.add_argument("--classes", type=int, default=7, help="demo class count")
     parser.add_argument("--seed", type=int, default=42)
     args = parser.parse_args()
 
@@ -96,6 +107,10 @@ def main() -> None:
     metrics = evaluate_classifier(y_test, predictions, probabilities, labels=list(range(classes)))
     output_dir.mkdir(parents=True, exist_ok=True)
     (output_dir / "metrics.json").write_text(json.dumps(metrics, default=json_safe, indent=2), encoding="utf-8")
+    class_names = DEMO_CLASS_NAMES[:classes] if classes <= len(DEMO_CLASS_NAMES) else [f"Classe {i}" for i in range(classes)]
+    (output_dir / "classes.json").write_text(json.dumps(class_names, ensure_ascii=False, indent=2), encoding="utf-8")
+    business_rules = {name: DEFAULT_RESPONSES.get(name, f"A classificação recebida foi {name}. Como posso ajudar?") for name in class_names}
+    (output_dir / "business_rules.json").write_text(json.dumps(business_rules, ensure_ascii=False, indent=2), encoding="utf-8")
     export_saved_model(model, output_dir / "saved_model")
     export_tflite(model, output_dir / "model.tflite")
     export_onnx(model, output_dir / "model.onnx")

@@ -1,0 +1,18 @@
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: backend/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      MODEL_PATH: /app/artifacts/saved_model
+
+  tensorflow-serving:
+    image: tensorflow/serving:2.15.1
+    ports:
+      - "8501:8501"
+    volumes:
+      - ../artifacts/saved_model:/models/ai/1
+    environment:
+      MODEL_NAME: ai

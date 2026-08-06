@@ -1,0 +1,51 @@
+{
+  "model": "/Users/bucha/ai/artifacts/saved_model",
+  "created_at": "2026-08-05T23:14:37.281374+00:00",
+  "results": [
+    {
+      "slug": "mmlu",
+      "category": "Conhecimento geral",
+      "name": "MMLU",
+      "measures": "Conhecimento em dezenas de disciplinas",
+      "harness_task": "mmlu",
+      "note": "modelo TensorFlow classificador; benchmark exige geração de texto",
+      "status": "not_applicable"
+    },
+    {
+      "slug": "mmlu_pro",
+      "category": "Conhecimento avançado",
+      "name": "MMLU-Pro",
+      "measures": "Versão mais difícil do MMLU",
+      "harness_task": "mmlu_pro",
+      "note": "modelo TensorFlow classificador; benchmark exige geração de texto",
+      "status": "not_applicable"
+    },
+    {
+      "slug": "gpqa_diamond",
+      "category": "Raciocínio científico",
+      "name": "GPQA Diamond",
+      "measures": "Física, química e biologia de pós-graduação",
+      "harness_task": "gpqa",
+      "note": "modelo TensorFlow classificador; benchmark exige geração de texto",
+      "status": "not_applicable"
+    },
+    {
+      "slug": "math",
+      "category": "Matemática",
+      "name": "MATH",
+      "measures": "Problemas matemáticos",
+      "harness_task": "math",
+      "note": "modelo TensorFlow classificador; benchmark exige geração de texto",
+      "status": "not_applicable"
+    },
+    {
+      "slug": "ifeval",
+      "category": "Seguimento de instruções",
+      "name": "IFEval",
+      "measures": "Seguir instruções complexas",
+      "harness_task": "ifeval",
+      "note": "modelo TensorFlow classificador; benchmark exige geração de texto",
+      "status": "not_applicable"
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "model": "artifacts/saved_model",
+  "evaluation_note": "Sem --data, foram usados pseudo-rótulos previstos pelo próprio modelo; as métricas não são uma avaliação independente.",
+  "model_input_shape": [
+    null,
+    8
+  ],
+  "devices": [
+    "/physical_device:CPU:0"
+  ],
+  "classification": {
+    "accuracy": 1.0,
+    "top_1_accuracy": 1.0,
+    "top_5_accuracy": 1.0,
+    "precision_weighted": 1.0,
+    "precision_macro": 1.0,
+    "precision_micro": 1.0,
+    "recall_weighted": 1.0,
+    "recall_macro": 1.0,
+    "recall_micro": 1.0,
+    "f1_weighted": 1.0,
+    "f1_macro": 1.0,
+    "f1_micro": 1.0,
+    "balanced_accuracy": 1.0,
+    "cohen_kappa": 1.0,
+    "matthews_corrcoef": 1.0,
+    "roc_auc_ovr": 0.9867309340196029,
+    "pr_auc_macro": 0.9088623775701368,
+    "log_loss": 1.293965643251405,
+    "brier_score": 0.6184078167539409,
+    "ece": 0.7177260415981674,
+    "confusion_matrix": [
+      [
+        10,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        17,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        60,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        39,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        59,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        30,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        41
+      ]
+    ],
+    "per_class_accuracy": {
+      "0": 1.0,
+      "1": 1.0,
+      "2": 1.0,
+      "3": 1.0,
+      "4": 1.0,
+      "5": 1.0,
+      "6": 1.0
+    },
+    "labels": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  "noise_robustness": {
+    "clean_accuracy": 1.0,
+    "noisy_accuracy": 0.96484375,
+    "noise_std": 0.05
+  },
+  "noise_calibration": {
+    "clean_ece": 0.7177260415981674,
+    "noisy_ece": 0.6747191972544622
+  },
+  "adversarial_robustness": {
+    "clean_accuracy": 1.0,
+    "fgsm_accuracy": null,
+    "pgd_accuracy": null,
+    "status": "indisponível: Não foi possível calcular o gradiente FGSM para este modelo"
+  },
+  "ood": {
+    "threshold": 0.5,
+    "in_distribution_accept_rate": 0.015625,
+    "ood_rejection_rate": 0.109375,
+    "ood_detection_rate": 0.0625
+  },
+  "performance": {
+    "batch_size": 32,
+    "repeats": 10,
+    "latency_ms": 21.935637504793704,
+    "throughput_per_second": 1458.8133120364923,
+    "peak_python_memory_mb": 0.6629705429077148
+  },
+  "model_load_time_ms": 129.56862500868738,
+  "batch_sizes": {
+    "1": {
+      "batch_size": 1,
+      "repeats": 3,
+      "latency_ms": 25.800555672806997,
+      "throughput_per_second": 38.758855145665315,
+      "peak_python_memory_mb": 0.26984691619873047
+    },
+    "8": {
+      "batch_size": 8,
+      "repeats": 3,
+      "latency_ms": 24.35333332202087,
+      "throughput_per_second": 328.49712580274206,
+      "peak_python_memory_mb": 0.3050193786621094
+    },
+    "32": {
+      "batch_size": 32,
+      "repeats": 3,
+      "latency_ms": 24.01881932746619,
+      "throughput_per_second": 1332.288634329628,
+      "peak_python_memory_mb": 0.2964763641357422
+    },
+    "64": {
+      "batch_size": 64,
+      "repeats": 3,
+      "latency_ms": 30.2169860030214,
+      "throughput_per_second": 2118.014020114403,
+      "peak_python_memory_mb": 0.21961402893066406
+    }
+  }
+}

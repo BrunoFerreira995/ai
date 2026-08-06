@@ -1,0 +1,24 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: ai-model-api
+spec:
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/minScale: "0"
+        autoscaling.knative.dev/maxScale: "10"
+    spec:
+      containerConcurrency: 80
+      containers:
+        - image: REGION-docker.pkg.dev/PROJECT_ID/ai/ai-model-api:latest
+          ports:
+            - name: http1
+              containerPort: 8000
+          env:
+            - name: MODEL_PATH
+              value: /app/artifacts/saved_model
+          resources:
+            limits:
+              cpu: "2"
+              memory: 2Gi

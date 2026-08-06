@@ -15,6 +15,7 @@ from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_sc
 
 from .lexicon import canonicalize_text
 from .education import detect_subject, subject_response
+from .literacy import literacy_response
 
 
 def normalize_text(text: str) -> str:
@@ -83,6 +84,7 @@ class PortugueseAssistant:
         "duvida_humanas": "Posso ajudar com História, Geografia, Filosofia e Sociologia.",
         "duvida_linguagens": "Posso ajudar com Língua Portuguesa, Literatura, Redação e idiomas.",
         "desconhecido": "Ainda não entendi completamente. Pode reformular a pergunta?",
+        "alfabetizacao": "Posso ajudar com letras, formação de sílabas, leitura e classificação de palavras. Diga uma palavra para eu analisá-la.",
     }
 
     keyword_intents = {
@@ -125,6 +127,13 @@ class PortugueseAssistant:
         "redacao": "duvida_linguagens",
         "inglês": "duvida_linguagens",
         "ingles": "duvida_linguagens",
+        "letra": "alfabetizacao",
+        "alfabeto": "alfabetizacao",
+        "sílaba": "alfabetizacao",
+        "silaba": "alfabetizacao",
+        "palavra": "alfabetizacao",
+        "separação silábica": "alfabetizacao",
+        "separacao silabica": "alfabetizacao",
     }
 
     def __init__(self) -> None:
@@ -174,11 +183,17 @@ class PortugueseAssistant:
             previous_intent = self.history[-1][1]
             intent = intent if confidence >= 0.5 else previous_intent
         self.history.append((text, intent))
+        literacy_word = None
+        if intent == "alfabetizacao":
+            words = re.findall(r"[A-Za-zÀ-ÿ]+", text)
+            ignored = {"o", "que", "é", "ser", "e", "uma", "um", "a", "as", "os", "como", "se", "da", "de", "do", "para", "com", "por", "letra", "letras", "alfabeto", "sílaba", "silaba", "sílabas", "silabas", "palavra", "palavras", "separação", "separacao", "silábica", "silabica"}
+            candidates = [word for word in words if normalize_text(word) not in ignored]
+            literacy_word = candidates[-1] if candidates else None
         return {
             "text": text,
             "intent": intent,
             "confidence": confidence,
             "entities": extract_entities(text),
             "subject": subject,
-            "response": subject_response(subject) if subject else self.responses.get(intent, "Entendi. Pode explicar um pouco mais a sua dúvida?"),
+            "response": literacy_response(literacy_word) if literacy_word else (subject_response(subject) if subject else self.responses.get(intent, "Entendi. Pode explicar um pouco mais a sua dúvida?")),
         }
