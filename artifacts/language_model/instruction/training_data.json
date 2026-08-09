@@ -1,0 +1,8 @@
+{
+  "qa_examples": 4271,
+  "validation_examples": 474,
+  "dictionary_words": 332006,
+  "dictionary_sequences": 14360,
+  "word_explanation_examples": 0,
+  "reference_explanation_examples": 0
+}

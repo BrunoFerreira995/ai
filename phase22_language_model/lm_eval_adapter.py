@@ -10,7 +10,7 @@ import tensorflow as tf
 
 from .generation import generate
 from .model import CausalLMConfig, DecoderOnlyCausalLM
-from .tokenizer import CharacterTokenizer
+from .tokenizer import load_tokenizer
 
 try:
     from lm_eval.api.model import LM
@@ -28,7 +28,7 @@ class TensorFlowCausalLM(LM):
         self.device_name = device
         self._device = device
         self.batch_size = int(batch_size)
-        self.tokenizer = CharacterTokenizer.load(self.model_dir / "tokenizer.json")
+        self.tokenizer = load_tokenizer(self.model_dir / "tokenizer.json")
         config = CausalLMConfig(**json.loads((self.model_dir / "config.json").read_text(encoding="utf-8")))
         with tf.device(device):
             self.model = DecoderOnlyCausalLM(config)
@@ -54,6 +54,8 @@ class TensorFlowCausalLM(LM):
         for request in requests:
             context, continuation = request.args
             context_ids = self.tok_encode(context, add_special_tokens=True)
+            if context_ids and context_ids[-1] == self.tokenizer.eos_id:
+                context_ids = context_ids[:-1]
             continuation_ids = self.tok_encode(continuation, add_special_tokens=False)
             full_ids = context_ids + continuation_ids
             inputs = tf.constant([full_ids[:-1]], dtype=tf.int32)

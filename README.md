@@ -28,19 +28,62 @@ do projeto [fserb/pt-br](https://github.com/fserb/pt-br), sob licença MIT.
 Para treinar e avaliar o Causal LM próprio:
 
 ```bash
-.venv/bin/python -m phase22_language_model.train_qa \
-  --data data/qa_train.jsonl \
-  --output-dir artifacts/language_model
+ python -m phase22_language_model.train_qa \
+    --data data/exam_qa_1m.jsonl.gz \
+    --data data/qa_phase20.jsonl \
+    --max-examples 1000000 \
+    --epochs 1 \
+    --dictionary-epochs 2 \
+    --word-explanations data/word_explanations.jsonl \
+    --reference-explanations data/reference_explanations.jsonl \
+    --output-dir artifacts/language_model
 
 .venv/bin/python -m pip install lm-eval
 .venv/bin/python -m phase22_language_model.run_lm_eval \
   --model-dir artifacts/language_model \
   --tasks mmlu,gpqa,aime24,bbh
 ```
+Para o projeto atual:
+
+ python -m phase22_language_model.prepare_corpus \
+    --input corpus/livros.txt \
+    --input corpus/artigos_completos.jsonl \
+    --validation-input corpus/validation.txt \
+    --train-output data/corpus_train.txt \
+    --validation-output data/corpus_validation.txt
+
+  python -m phase22_language_model.train_lm \
+    --text data/corpus_train.txt \
+    --validation-text data/corpus_validation.txt \
+    --tokenizer sentencepiece \
+    --output-dir artifacts/language_model/pretraining
+
+  Depois:
+
+  python -m phase22_language_model.train_lm \
+    --init-dir artifacts/language_model/pretraining \
+    --text data/domain_train.txt \
+    --validation-text data/domain_validation.txt \
+    --output-dir artifacts/language_model/continued
+
+  E finalmente:
+
+  python -m phase22_language_model.train_qa \
+    --init-dir artifacts/language_model/continued \
+    --data data/instructions_train.jsonl \
+    --output-dir artifacts/language_model/instruction
 
 O treinamento acima usa o dataset de demonstração com 7 classes educacionais
 e cria os arquivos em
 `artifacts/`. Não use `--data` sem ter criado um arquivo `.npz`.
+
+O dataset `qa_phase20.jsonl` também inclui perguntas e respostas sobre as
+referências científicas dos 75 subtemas educacionais. O treinamento usa os
+artigos como conhecimento bibliográfico textual; ele não lê o conteúdo
+integral dos artigos nem deve inventar resultados além dos metadados treinados.
+Também inclui teoria do conhecimento: sujeito cognoscente, objeto do
+conhecimento, relação sujeito–objeto, justificação, empirismo, racionalismo e
+criticismo.
 
 ## Visão geral da arquitetura
 
@@ -62,6 +105,16 @@ flowchart LR
 O classificador (`artifacts/saved_model`) responde com classe e probabilidades.
 O Causal LM (`artifacts/language_model`) é o componente experimental para
 geração de texto em português.
+
+O treinamento novo do Causal LM pode usar tokenizer BPE SentencePiece:
+
+```bash
+.venv/bin/python -m phase22_language_model.train_qa \
+  --data data/qa_phase20.jsonl \
+  --tokenizer sentencepiece \
+  --vocab-size 32000 \
+  --output-dir artifacts/language_model
+```
 
 ## Fluxo de treinamento
 
@@ -321,12 +374,17 @@ Treinar o Causal LM próprio:
 ```bash
 .venv/bin/python -m phase20_portuguese_nlp.build_qa_dataset \
   --output data/qa_phase20.jsonl \
-  --dictionary-variants 4
+  --dictionary-variants 4 \
+  --references docs/educational_references.md
 .venv/bin/python -m phase20_portuguese_nlp.build_word_explanations \
   --output data/word_explanations.jsonl
+.venv/bin/python -m phase20_portuguese_nlp.build_reference_explanations \
+  --source data/educational_references_60.json \
+  --output data/reference_explanations.jsonl
 .venv/bin/python -m phase22_language_model.train_qa \
   --data data/qa_phase20.jsonl \
   --word-explanations data/word_explanations.jsonl \
+  --reference-explanations data/reference_explanations.jsonl \
   --output-dir artifacts/language_model
 ```
 

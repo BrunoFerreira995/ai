@@ -1,5 +1,7 @@
 {
-  "qa_examples": 235,
+  "qa_examples": 1004745,
   "dictionary_words": 332006,
-  "dictionary_sequences": 14360
+  "dictionary_sequences": 14360,
+  "word_explanation_examples": 332006,
+  "reference_explanation_examples": 4500
 }

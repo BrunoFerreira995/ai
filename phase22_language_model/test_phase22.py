@@ -21,6 +21,8 @@ class Phase22Tests(unittest.TestCase):
         self.assertEqual(self.tokenizer.decode(ids), "oi")
         x, y = make_causal_examples(self.tokenizer, ["oi"], 8)
         self.assertEqual(x.shape, y.shape)
+        self.assertEqual(int(y[0, 0]), ids[1])
+        self.assertEqual(int(x[0, 0]), ids[0])
 
     def test_decoder_and_generation(self):
         prompt = [[self.tokenizer.bos_id, self.tokenizer.vocabulary.index("O")]]

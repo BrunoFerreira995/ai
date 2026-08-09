@@ -3,18 +3,28 @@
 from __future__ import annotations
 
 import json
+import gzip
 from pathlib import Path
 
 
-def load_qa_dataset(path: str | Path) -> list[dict[str, str]]:
+def load_qa_dataset(path: str | Path, max_examples: int | None = None) -> list[dict[str, str]]:
     rows = []
-    for line_number, line in enumerate(Path(path).read_text(encoding="utf-8").splitlines(), 1):
+    source = Path(path)
+    opener = gzip.open if source.suffix == ".gz" else open
+    with opener(source, "rt", encoding="utf-8") as handle:
+      lines = enumerate(handle, 1)
+      for line_number, line in lines:
+        if max_examples is not None and len(rows) >= max_examples:
+            break
         if not line.strip():
             continue
         row = json.loads(line)
         if not row.get("question") or not row.get("answer"):
             raise ValueError(f"linha {line_number}: question e answer são obrigatórios")
-        rows.append({"question": str(row["question"]), "answer": str(row["answer"])})
+        normalized = {key: str(value) for key, value in row.items() if value is not None}
+        normalized["question"] = str(row["question"])
+        normalized["answer"] = str(row["answer"])
+        rows.append(normalized)
     if not rows:
         raise ValueError("dataset QA vazio")
     return rows

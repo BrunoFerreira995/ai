@@ -1,0 +1,4 @@
+{
+  "type": "sentencepiece",
+  "model_file": "tokenizer.model"
+}

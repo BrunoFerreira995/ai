@@ -344,96 +344,99 @@
 
 ### Conhecimentos Educacionais
 
-- [x] Língua Portuguesa
-- [x] Leitura e interpretação de textos
-- [x] Gramática
-- [x] Ortografia e acentuação
-- [x] Morfologia e sintaxe
-- [x] Semântica e variação linguística
-- [x] Literatura
-  - [x] Gêneros literários
-  - [x] Escolas literárias
-  - [x] Literatura brasileira
-  - [x] Literatura portuguesa
-  - [x] Análise de obras e autores
-- [x] Redação
-  - [x] Estrutura textual
-  - [x] Tese e planejamento
-  - [x] Argumentação
-  - [x] Coesão e coerência
-  - [x] Revisão e conclusão
-- [x] Matemática
-  - [x] Aritmética
-  - [x] Álgebra
-  - [x] Geometria
-  - [x] Funções
-  - [x] Estatística e probabilidade
-- [x] Física
-  - [x] Cinemática
-  - [x] Dinâmica e leis de Newton
-  - [x] Trabalho e energia
-  - [x] Ondas e óptica
-  - [x] Eletricidade e magnetismo
-- [x] Química
-  - [x] Estrutura atômica
-  - [x] Tabela periódica
-  - [x] Ligações químicas
-  - [x] Reações e estequiometria
-  - [x] Química orgânica
-- [x] Biologia
-  - [x] Citologia
-  - [x] Genética
-  - [x] Evolução
-  - [x] Ecologia
-  - [x] Fisiologia
-- [x] História
-  - [x] Antiguidade
-  - [x] Idade Média
-  - [x] Idade Moderna
-  - [x] História do Brasil
-  - [x] Mundo contemporâneo
-- [x] Geografia
-  - [x] Cartografia
-  - [x] População e demografia
-  - [x] Urbanização e industrialização
-  - [x] Geopolítica
-  - [x] Meio ambiente e sustentabilidade
-- [x] Filosofia
-  - [x] Filosofia antiga
-  - [x] Ética
-  - [x] Política
-  - [x] Epistemologia
-  - [x] Lógica e argumentação
-- [x] Sociologia
-  - [x] Cultura e socialização
-  - [x] Instituições sociais
-  - [x] Classes e desigualdades
-  - [x] Trabalho e economia
-  - [x] Cidadania e movimentos sociais
-- [x] Língua Inglesa ou outro idioma
-  - [x] Vocabulário
-  - [x] Gramática
-  - [x] Leitura e interpretação
-  - [x] Escrita e conversação
-  - [x] Pronúncia e compreensão auditiva
-- [x] Educação Física
-  - [x] Esportes e regras
-  - [x] Jogos e brincadeiras
-  - [x] Corpo e movimento
-  - [x] Saúde e qualidade de vida
-  - [x] Inclusão e cooperação
-- [x] Artes
-  - [x] Artes visuais
-  - [x] Música
-  - [x] Teatro
-  - [x] Dança
-  - [x] História e crítica da arte
-- [x] Itinerários Formativos conforme a escola
-  - [x] Projeto de vida
-  - [x] Eletivas
-  - [x] Aprofundamento de áreas
-  - [x] Projetos de pesquisa e intervenção
-  - [x] Orientação profissional
+O treinamento usa **60 referências científicas por subtema**, totalizando
+**4.500 referências** para os 75 subtemas educacionais.
+
+- [x] Língua Portuguesa — [60 referências no treino](docs/educational_references.md#língua-portuguesa)
+- [x] Leitura e interpretação de textos — [60 referências no treino](docs/educational_references.md#língua-portuguesa-subtemas)
+- [x] Gramática — [60 referências no treino](docs/educational_references.md#língua-portuguesa-subtemas)
+- [x] Ortografia e acentuação — [60 referências no treino](docs/educational_references.md#língua-portuguesa-subtemas)
+- [x] Morfologia e sintaxe — [60 referências no treino](docs/educational_references.md#língua-portuguesa-subtemas)
+- [x] Semântica e variação linguística — [60 referências no treino](docs/educational_references.md#língua-portuguesa-subtemas)
+- [x] Literatura — [60 referências no treino](docs/educational_references.md#literatura)
+  - [x] Gêneros literários — [60 referências no treino](docs/educational_references.md#literatura-subtemas)
+  - [x] Escolas literárias — [60 referências no treino](docs/educational_references.md#literatura-subtemas)
+  - [x] Literatura brasileira — [60 referências no treino](docs/educational_references.md#literatura-subtemas)
+  - [x] Literatura portuguesa — [60 referências no treino](docs/educational_references.md#literatura-subtemas)
+  - [x] Análise de obras e autores — [60 referências no treino](docs/educational_references.md#literatura-subtemas)
+- [x] Redação — [60 referências no treino](docs/educational_references.md#redação)
+  - [x] Estrutura textual — [60 referências no treino](docs/educational_references.md#redação-subtemas)
+  - [x] Tese e planejamento — [60 referências no treino](docs/educational_references.md#redação-subtemas)
+  - [x] Argumentação — [60 referências no treino](docs/educational_references.md#redação-subtemas)
+  - [x] Coesão e coerência — [60 referências no treino](docs/educational_references.md#redação-subtemas)
+  - [x] Revisão e conclusão — [60 referências no treino](docs/educational_references.md#redação-subtemas)
+- [x] Matemática — [60 referências no treino](docs/educational_references.md#matemática)
+  - [x] Aritmética — [60 referências no treino](docs/educational_references.md#matemática-subtemas)
+  - [x] Álgebra — [60 referências no treino](docs/educational_references.md#matemática-subtemas)
+  - [x] Geometria — [60 referências no treino](docs/educational_references.md#matemática-subtemas)
+  - [x] Funções — [60 referências no treino](docs/educational_references.md#matemática-subtemas)
+  - [x] Estatística e probabilidade — [60 referências no treino](docs/educational_references.md#matemática-subtemas)
+- [x] Física — [60 referências no treino](docs/educational_references.md#física)
+  - [x] Cinemática — [60 referências no treino](docs/educational_references.md#física-subtemas)
+  - [x] Dinâmica e leis de Newton — [60 referências no treino](docs/educational_references.md#física-subtemas)
+  - [x] Trabalho e energia — [60 referências no treino](docs/educational_references.md#física-subtemas)
+  - [x] Ondas e óptica — [60 referências no treino](docs/educational_references.md#física-subtemas)
+  - [x] Eletricidade e magnetismo — [60 referências no treino](docs/educational_references.md#física-subtemas)
+- [x] Química — [60 referências no treino](docs/educational_references.md#química)
+  - [x] Estrutura atômica — [60 referências no treino](docs/educational_references.md#química-subtemas)
+  - [x] Tabela periódica — [60 referências no treino](docs/educational_references.md#química-subtemas)
+  - [x] Ligações químicas — [60 referências no treino](docs/educational_references.md#química-subtemas)
+  - [x] Reações e estequiometria — [60 referências no treino](docs/educational_references.md#química-subtemas)
+  - [x] Química orgânica — [60 referências no treino](docs/educational_references.md#química-subtemas)
+- [x] Biologia — [60 referências no treino](docs/educational_references.md#biologia)
+  - [x] Citologia — [60 referências no treino](docs/educational_references.md#biologia-subtemas)
+  - [x] Genética — [60 referências no treino](docs/educational_references.md#biologia-subtemas)
+  - [x] Evolução — [60 referências no treino](docs/educational_references.md#biologia-subtemas)
+  - [x] Ecologia — [60 referências no treino](docs/educational_references.md#biologia-subtemas)
+  - [x] Fisiologia — [60 referências no treino](docs/educational_references.md#biologia-subtemas)
+- [x] História — [60 referências no treino](docs/educational_references.md#história)
+  - [x] Antiguidade — [60 referências no treino](docs/educational_references.md#história-subtemas)
+  - [x] Idade Média — [60 referências no treino](docs/educational_references.md#história-subtemas)
+  - [x] Idade Moderna — [60 referências no treino](docs/educational_references.md#história-subtemas)
+  - [x] História do Brasil — [60 referências no treino](docs/educational_references.md#história-subtemas)
+  - [x] Mundo contemporâneo — [60 referências no treino](docs/educational_references.md#história-subtemas)
+- [x] Geografia — [60 referências no treino](docs/educational_references.md#geografia)
+  - [x] Cartografia — [60 referências no treino](docs/educational_references.md#geografia-subtemas)
+  - [x] População e demografia — [60 referências no treino](docs/educational_references.md#geografia-subtemas)
+  - [x] Urbanização e industrialização — [60 referências no treino](docs/educational_references.md#geografia-subtemas)
+  - [x] Geopolítica — [60 referências no treino](docs/educational_references.md#geografia-subtemas)
+  - [x] Meio ambiente e sustentabilidade — [60 referências no treino](docs/educational_references.md#geografia-subtemas)
+- [x] Filosofia — [60 referências no treino](docs/educational_references.md#filosofia)
+  - [x] Filosofia antiga — [60 referências no treino](docs/educational_references.md#filosofia-subtemas)
+  - [x] Ética — [60 referências no treino](docs/educational_references.md#filosofia-subtemas)
+  - [x] Política — [60 referências no treino](docs/educational_references.md#filosofia-subtemas)
+  - [x] Epistemologia — [60 referências no treino](docs/educational_references.md#filosofia-subtemas)
+  - [x] Lógica e argumentação — [60 referências no treino](docs/educational_references.md#filosofia-subtemas)
+- [x] Sociologia — [60 referências no treino](docs/educational_references.md#sociologia)
+  - [x] Cultura e socialização — [60 referências no treino](docs/educational_references.md#sociologia-subtemas)
+  - [x] Instituições sociais — [60 referências no treino](docs/educational_references.md#sociologia-subtemas)
+  - [x] Classes e desigualdades — [60 referências no treino](docs/educational_references.md#sociologia-subtemas)
+  - [x] Trabalho e economia — [60 referências no treino](docs/educational_references.md#sociologia-subtemas)
+  - [x] Cidadania e movimentos sociais — [60 referências no treino](docs/educational_references.md#sociologia-subtemas)
+- [x] Língua Inglesa ou outro idioma — [60 referências no treino](docs/educational_references.md#língua-inglesa-ou-outro-idioma)
+  - [x] Vocabulário — [60 referências no treino](docs/educational_references.md#língua-inglesa-ou-outro-idioma-subtemas)
+  - [x] Gramática — [60 referências no treino](docs/educational_references.md#língua-inglesa-ou-outro-idioma-subtemas)
+  - [x] Leitura e interpretação — [60 referências no treino](docs/educational_references.md#língua-inglesa-ou-outro-idioma-subtemas)
+  - [x] Escrita e conversação — [60 referências no treino](docs/educational_references.md#língua-inglesa-ou-outro-idioma-subtemas)
+  - [x] Pronúncia e compreensão auditiva — [60 referências no treino](docs/educational_references.md#língua-inglesa-ou-outro-idioma-subtemas)
+- [x] Educação Física — [60 referências no treino](docs/educational_references.md#educação-física)
+  - [x] Esportes e regras — [60 referências no treino](docs/educational_references.md#educação-física-subtemas)
+  - [x] Jogos e brincadeiras — [60 referências no treino](docs/educational_references.md#educação-física-subtemas)
+  - [x] Corpo e movimento — [60 referências no treino](docs/educational_references.md#educação-física-subtemas)
+  - [x] Saúde e qualidade de vida — [60 referências no treino](docs/educational_references.md#educação-física-subtemas)
+  - [x] Inclusão e cooperação — [60 referências no treino](docs/educational_references.md#educação-física-subtemas)
+- [x] Artes — [60 referências no treino](docs/educational_references.md#artes)
+  - [x] Artes visuais — [60 referências no treino](docs/educational_references.md#artes-subtemas)
+  - [x] Música — [60 referências no treino](docs/educational_references.md#artes-subtemas)
+  - [x] Teatro — [60 referências no treino](docs/educational_references.md#artes-subtemas)
+  - [x] Dança — [60 referências no treino](docs/educational_references.md#artes-subtemas)
+  - [x] História e crítica da arte — [60 referências no treino](docs/educational_references.md#artes-subtemas)
+- [x] Itinerários Formativos conforme a escola — [60 referências no treino](docs/educational_references.md#itinerários-formativos)
+  - [x] Projeto de vida — [60 referências no treino](docs/educational_references.md#itinerários-formativos-subtemas)
+  - [x] Eletivas — [60 referências no treino](docs/educational_references.md#itinerários-formativos-subtemas)
+  - [x] Aprofundamento de áreas — [60 referências no treino](docs/educational_references.md#itinerários-formativos-subtemas)
+  - [x] Projetos de pesquisa e intervenção — [60 referências no treino](docs/educational_references.md#itinerários-formativos-subtemas)
+  - [x] Orientação profissional — [60 referências no treino](docs/educational_references.md#itinerários-formativos-subtemas)
 
 ## Phase 21 — Avaliação do Classificador
 
@@ -535,3 +538,31 @@ classes, probabilidades e respostas de regras de negócio.
 - [x] Criar adaptador do modelo para `lm-eval`
 - [x] Criar script de execução dos benchmarks do modelo local
 - [ ] Executar MMLU, GPQA, AIME, BBH e benchmarks de código
+
+🧠 Conhecimento
+✅ MMLU
+✅ MMLU-Pro
+✅ GPQA
+🤔 Raciocínio
+✅ BBH
+✅ GSM8K
+✅ MATH
+✅ AIME
+💻 Programação
+✅ HumanEval+
+✅ MBPP+
+✅ LiveCodeBench
+🗣️ Qualidade da conversa
+✅ MT-Bench
+✅ Arena-Hard
+✅ AlpacaEval
+📖 Seguir instruções
+✅ IFEval
+🌍 Conhecimento factual
+✅ SimpleQA
+✅ PopQA
+✅ TruthfulQA
+🖼️ Visão (caso o modelo aceite imagens)
+✅ MMMU
+✅ MMBench
+✅ MMVet

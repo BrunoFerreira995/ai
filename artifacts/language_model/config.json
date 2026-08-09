@@ -1,5 +1,5 @@
 {
-  "vocab_size": 74,
+  "vocab_size": 766,
   "max_sequence_length": 256,
   "hidden_size": 128,
   "num_layers": 2,

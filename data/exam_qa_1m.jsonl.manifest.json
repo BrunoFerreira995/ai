@@ -1,0 +1,25 @@
+{
+  "rows": 1000000,
+  "sources": [
+    {
+      "source": "recogna-nlp/EduBench",
+      "license": "dataset card; verify terms",
+      "rows": 134
+    },
+    {
+      "source": "Tropic-AI/BLUEX-v2",
+      "license": "dataset card; verify terms",
+      "rows": 57
+    },
+    {
+      "source": "recogna-nlp/Bode-reasoning",
+      "license": "dataset card; verify terms",
+      "rows": 728
+    },
+    {
+      "source": "emdemor/ptbr-question-and-answer",
+      "license": "CC; retain attribution",
+      "rows": 999081
+    }
+  ]
+}
